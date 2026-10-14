@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <AssemblyName>CollaborativePlaylists</AssemblyName>
+    <RootNamespace>CollaborativePlaylists</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <Version>0.1.1.0</Version>
+    <AssemblyVersion>0.1.1.0</AssemblyVersion>
+    <FileVersion>0.1.1.0</FileVersion>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <Deterministic>true</Deterministic>
+    <PathMap>$(MSBuildProjectDirectory)=src</PathMap>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Jellyfin.Common" Version="12.1.0" />
+    <PackageReference Include="Jellyfin.Controller" Version="12.1.0" />
+    <PackageReference Include="Jellyfin.Model" Version="12.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Frontend/js/manage-editors.js" LogicalName="CollaborativePlaylists.Frontend.js.manage-editors.js" />
+  </ItemGroup>
+
+  <Target Name="StripUnneededDlls" AfterTargets="Build">
+    <ItemGroup>
+      <_FilesToDelete Include="$(OutputPath)Jellyfin.*.dll" />
+      <_FilesToDelete Include="$(OutputPath)MediaBrowser.*.dll" />
+      <_FilesToDelete Include="$(OutputPath)Microsoft.*.dll" />
+      <_FilesToDelete Include="$(OutputPath)System.*.dll" />
+      <_FilesToDelete Include="$(OutputPath)Emby.*.dll" />
+      <_FilesToDelete Include="$(OutputPath)ICU4N*.dll" />
+      <_FilesToDelete Include="$(OutputPath)BitFaster.*.dll" />
+      <_FilesToDelete Include="$(OutputPath)Polly*.dll" />
+      <_FilesToDelete Include="$(OutputPath)NEbml.*.dll" />
+      <_FilesToDelete Include="$(OutputPath)J2N.dll" />
+      <_FilesToDelete Include="$(OutputPath)Diacritics.dll" />
+    </ItemGroup>
+    <Delete Files="@(_FilesToDelete)" />
+  </Target>
+
+</Project>

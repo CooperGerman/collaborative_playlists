@@ -1,0 +1,15 @@
+{
+  "guid": "a425dd4d-92e2-40d3-b923-5fe78c53adf1",
+  "name": "Collaborative Playlists",
+  "description": "Manage per-user editor access for Jellyfin playlists.",
+  "overview": "Adds native per-user playlist editor controls to the Jellyfin Web Edit Playlist dialog.",
+  "owner": "self-hosted",
+  "category": "General",
+  "version": "0.1.1.0",
+  "targetAbi": "12.1.0.0",
+  "framework": "net10.0",
+  "assemblies": ["CollaborativePlaylists.dll"],
+  "status": "Active",
+  "autoUpdate": false,
+  "imagePath": ""
+}

@@ -1,0 +1,5 @@
+plugin/source/bin/
+plugin/source/obj/
+plugin/artifacts/
+__pycache__/
+*.pyc

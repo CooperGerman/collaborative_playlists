@@ -1,0 +1,20 @@
+[
+  {
+    "category": "General",
+    "guid": "a425dd4d-92e2-40d3-b923-5fe78c53adf1",
+    "name": "Collaborative Playlists",
+    "description": "Manage per-user editor access for Jellyfin playlists.",
+    "owner": "self-hosted",
+    "overview": "Adds native per-user playlist editor controls to the Jellyfin Web Edit Playlist dialog.",
+    "versions": [
+      {
+        "version": "0.1.1.0",
+        "changelog": "- Include hidden Jellyfin accounts in the editor picker while excluding disabled users.\n- Add owner-only editor management to the standard Jellyfin Web Edit Playlist dialog.\n- Use Jellyfin's native playlist sharing and CanEdit permissions.",
+        "targetAbi": "12.1.0.0",
+        "sourceUrl": "https://raw.githubusercontent.com/CooperGerman/collaborative_playlists/main/plugin/CollaborativePlaylists.zip",
+        "checksum": "dc7e31f11772b0245f9ab8eb51c42460",
+        "timestamp": "2026-10-14T17:51:24Z"
+      }
+    ]
+  }
+]
